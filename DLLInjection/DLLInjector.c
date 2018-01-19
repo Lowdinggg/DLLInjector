@@ -7,7 +7,7 @@ BOOL injectIntoProcess(int processId, char* dllPath) {
 		printf("Could not process \n");
 		return FALSE;
 	}
-	DWORD LoadLibAdr = GetProcAddress(GetModuleHandle(L"kernel32.dl"), "LoadLibraryA");
+	DWORD LoadLibAdr = GetProcAddress(GetModuleHandle(L"kernel32.dll"), "LoadLibraryA");
 	if(!LoadLibAdr) {
 		printf("Could not get LoadLibraryA address \n");
 		return FALSE;
